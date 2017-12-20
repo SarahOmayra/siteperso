@@ -1,0 +1,32 @@
+/*FONT IMPORT*/
+
+@mixin font-face($style-name, $file, $family, $category:"") {
+  $filepath: "../fonts" + $family + "/" + $file;
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".otf");
+  }
+}
+
+/*BORDER RADIUS*/
+
+@mixin border-radius($radius){
+  -webkit-border-radius:$radius!important;
+  -moz-border-radius: $radius!important;
+  -ms-border-radius: $radius!important;
+  border-radius: $radius!important;
+}
+
+/*ANIMATION CALL*/
+
+@mixin animationcall($name,$duration,$iteration){
+  animation-name: $name;
+  -moz-animation-name: $name;
+  -webkit-animation-name: $name;
+  animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+  animation-iteration-count: $iteration;
+  -moz-animation-iteration-count: $iteration;
+  -webkit-animation-iteration-count: $iteration;
+}

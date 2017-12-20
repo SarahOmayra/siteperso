@@ -1,0 +1,45 @@
+.portfolio{
+  position:relative;
+}
+
+.portfolio-img {
+  display: block;
+  width: 100%;
+}
+
+.overlay{
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(251,88,88,0.95);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.portfolio:hover .overlay{
+  width: calc( 100% - 28px);
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.technos{
+  font-family: 'Playfair Display', serif;
+  max-width: 80%;
+}
+
+@media (max-width:450px){
+  .technos{
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    <nav class="navbar navbar-expand-lg font-lemon-bold">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav mr-auto hover">
+                <li class="nav-item-active"><a class="nav-link" href="#home"><img src="{{ asset('images/favIconSarahPeltier.svg') }}" class="img-responsive navbar-logo" alt="Sarah Peltier"></a></li>
+                <li><a class="nav-item" href="#cv">CV</a></li>
+                <li><a class="nav-item" href="#parcours">PARCOURS</a></li>
+                <li><a class="nav-item" href="#portfolio">PORTFOLIO</a></li>
+            </ul>
+        </div>
+    </nav>
+    {#
+        <nav class="navbar ">
+            <span class="navbar-text right-align">blablabla</span>
+        </nav>
+    #}
+
+{% endblock %}
+
+
+{% block footer %}
+    <div class="footer text-center">
+        © 2017 Sarah Peltier. All Rights Reserved.
+    </div>
+
+{% endblock %}

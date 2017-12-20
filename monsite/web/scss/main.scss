@@ -1,0 +1,95 @@
+@import "mixins";
+@import "theme";
+@import "modules";
+
+a{
+  color:white;
+}
+
+
+body{
+  background: linear-gradient(180deg,#FB5858,#fffa8d);
+}
+
+.logo{
+  @include animationcall(appear,1s,1);
+}
+
+@keyframes appear{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+.stripe{
+  height: 10px;
+  width: 100vw;
+  background: linear-gradient(-45deg, #FB5858,#fffa8d);
+  transform: skewY(45deg);
+  margin-top:100vh;
+  z-index: 0;
+  &.st1{
+/*
+    margin-top: 100px;
+*/
+
+  }
+  &.st2{
+    margin-top: 10px;
+  }
+  &.st3{
+    margin-top: 10px;
+  }
+}
+
+
+
+.hello{
+  width: 100vw;
+  margin-top: -100vh;
+  height: 200px;
+  font-size:x-large;
+  color: #ffffff;
+  @media (max-width: 576px){
+    margin-top: 15vh;
+    font-size: large;
+  }
+  p{
+    font-family: 'Playfair Display', serif;
+  }
+  .btn-light{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+//    margin-left: calc(50% - 40px);
+  }
+  .btn-light:hover{
+    background-color: white;
+    color: #FB5858;
+    a{
+      color: #FB5858;
+    }
+  }
+}
+
+
+.portfolio{
+  color:white;
+  font-size:x-large;
+  margin-top: 100px;
+
+}
+
+.font-lemon-bold{
+  @include font-face(LemonMilkBold,"LemonMilkbold","","");
+}
+
+.collapse.show{
+  text-align: center;
+}

@@ -1,0 +1,107 @@
+nav{
+  text-align: center;
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  @media (min-width:990px) {
+    li {
+      display: inline-block;
+      margin-top: 15px;
+      a {
+        text-decoration: none;
+        color:white;
+        position:relative;
+        padding-bottom: 15px;
+        height: 60px;
+        margin-right: 8vw;
+        .nav-item{
+          margin-bottom: 30px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  @media (max-width:990px){
+    li {
+      min-width: 100%;
+      display: inline-block;
+      margin-top: 15px;
+      a {
+        text-decoration: none;
+        color:white;
+        position:relative;
+        padding-bottom: 15px;
+        height: 60px;
+        .nav-item{
+          margin-bottom: 30px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+    a:hover, .active{
+      text-decoration:none;
+      color: #fffa8d;
+    }
+
+  }
+
+.navbar-text{
+  background-color: #FB5858;
+}
+
+.navbar-logo{
+  margin-top: -20px;
+}
+@media (max-width: 990px){
+  .navbar-logo{
+    margin-top: 0px;
+  }
+
+}
+
+
+@include font-face(LemonMilk,"LemonMilk","","");
+
+.hover a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fffa8d;
+  transform: scale3d(0,1,1);
+  transition: all .3s ease;
+}
+
+.hover a:hover:before, .hover .active:before {
+  transform: scale3d(1,1,1);
+}
+
+/* hover two style */
+#navbarSupportedContent{
+  color: white;
+}
+.navbar-toggler{
+  border: 2px solid white;
+  color: white;
+}
+.navbar-toggler-icon{
+  color: white;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+
+.navbar .navbar-nav {
+  text-align: center;
+  float: none;
+  vertical-align: top;
+}

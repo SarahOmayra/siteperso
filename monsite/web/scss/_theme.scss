@@ -1,0 +1,55 @@
+$highlight-height:3px;
+$theme-primary-color: #fffa8d;
+
+@font-face{
+  font-family: 'LemonMilkBold';
+  src:url("../fonts/LemonMilkbold.otf");
+}
+@font-face{
+  font-family: 'LemonMilk';
+  src:url("../fonts/LemonMilk.otf");
+}
+
+
+@media (min-width: 990px){
+  h1{
+    font-size:5vw;
+  }
+}
+
+@media (max-width: 990px){
+  h1{
+    font-size:50px;
+  }
+}
+
+.font-lemon-bold{
+  font-family: 'LemonMilkBold';
+}
+
+.font-lemon{
+  font-family: 'LemonMilk';
+}
+
+ul{
+  list-style-type:none;
+  #tiles {
+    @media (max-width:630px) {
+      padding-left: 0px;
+    }
+  }
+}
+
+li{
+  list-style-type: none;
+}
+
+hr{
+  background-color:#fffa8d;
+  height: 3px;
+  width:50%;
+  @media (max-width:630px) {
+    margin-bottom: 50px;
+  }
+
+}

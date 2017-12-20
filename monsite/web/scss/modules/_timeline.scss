@@ -1,0 +1,108 @@
+.img-parcours{
+  width: 80%;
+  margin-left: -10%;
+}
+@media (max-width: 990px){
+  .img-parcours{
+    display: none;  }
+}
+.timeline{
+  margin-top: 180px;
+  padding-top: 100px;
+  padding-left:0;
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
+  color: white;
+  font-size:x-large;
+  @media (max-width:990px) {
+    margin-top: 50px;
+  }
+  @media (max-width:630px) {
+    font-size:large;
+  }
+
+  .title-timeline{
+    color:white;
+  }
+  li{
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    padding-left: 40px;
+    padding-top:12px;
+    margin-bottom: 20px;
+    @media (max-width:630px) {
+      padding-left: 0px;
+    }
+      .year{
+      position: absolute;
+      margin-left: -35px;
+      color: #fffa8d;
+    }
+    .description{
+      margin-left: 80px;
+      font-weight: bold;
+      @media (max-width:630px) {
+        margin-left: 0px;
+      }
+    }
+    p{
+      margin-top:10px;
+      margin-left: 80px;
+      @media (max-width:630px) {
+        margin-left: 0px;
+        margin-bottom: 30px;
+      }
+      .font-lemon{
+        font-weight:bold;
+      }
+    }
+    &:after{
+      content: "";
+      width: 150px;
+      height: 150px;
+      @include border-radius(50%);
+      background-color: transparent;
+      border: 3px solid #fffa8d;
+      position: absolute;
+      left: -50px;
+      top: 30px;
+      z-index: 1;
+      @media (max-width:630px) {
+        display:none;
+      }
+    }
+    .timeline-icon {
+      position: absolute;
+      left: 0;
+      top: 85px;
+      z-index: 2;
+      @media (max-width:630px) {
+        top: -40px;
+        left: -30px;
+
+      }
+
+    }
+  }
+  &:after{
+    content: "";
+    height: auto;
+    width: 1px;
+    background: #3a3a3a;
+    position: absolute;
+    z-index:0;
+    top:-6vh;
+    left: 5px;
+    bottom:-3vh;
+  }
+}
+
+.parcours-bg{
+  background: linear-gradient(180deg,#fd966c,#fec17a);
+  padding-left:50px;
+  padding-right:50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  box-shadow: 4px 4px 6px #9d5c2e;
+}

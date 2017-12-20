@@ -1,0 +1,101 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block body %}
+
+    <div id="home" class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="logo text-center">
+                <img class="img-fluid" src="{{ asset('images/drawingblanc.svg') }}" alt="Logo" class="logo">
+            </div>
+        </div>
+        <div class="row d-none d-sm-block">
+            <div class="stripe st1">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+            <div class="stripe st2">
+            </div>
+
+        </div>
+        <div id="cv" class="row justify-content-center hello">
+            <div class="col-lg-4 col-xs-12">
+                    <h1 class="font-lemon-bold">BONJOUR</1>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <p>Je m'appelle Sarah Peltier et je suis nouvellement développeuse web. Je me suis spécialisée dans le développement front et suis très sensible à l'UX et au webdesign. Vous pouvez télécharger mon CV pour plus de détails sur mon parcours. </p>
+                <a  href="pdf/CV.pdf" target="_blank" type="button" class="btn btn-light"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>     <button onclick="window.open('https://www.linkedin.com/in/sarah-peltier-870a164b','_blank')" type="button" class="btn btn-light"><i class="fa fa-linkedin" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div id="parcours" class="row justify-content-center timeline">
+            <div class="col-lg-4 col-xs-12">
+                <h1 class="font-lemon-bold title-timeline">PARCOURS</h1>
+{#
+                <img class="img-parcours" src="{{ asset('images/drawingblancparcours.svg') }}" alt="img">
+#}
+
+            </div>
+            <div class="col-lg-4 col-xs-12 parcours-bg">
+                {% for parcour in parcours %}
+                    <ul id="tiles">
+                        <li>
+                            <span class="year font-lemon timeline-icon hidden-xs hidden-sm hidden-md">{{ parcour.startDate|localizeddate('long', 'short', 'fr', null, 'MMM YYYY')|capitalize }}</span><span class="description font-lemon ">{{ parcour.title }}</span>
+                            <p class="font-lemon">{{ parcour.company }}</p>
+                            <p>{{ parcour.description }}</p>
+                            <hr>
+                        </li>
+                    </ul>
+
+                {% endfor %}
+
+            </div>
+        </div>
+        <div id="portfolio" class="row justify-content-center portfolio">
+            <div class="col-lg-8 col-xs-12">
+                <h1 class="font-lemon-bold">PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            {% for projet in portfolio %}
+            <div class="col-sm-12 col-md-6 col-lg-4 portfolio text-center">
+                <a href="{{ projet.link }}">
+                <img class="portfolio-img img-responsive" src="{{ asset('uploads/'~ projet.image) | imagine_filter('my_thumb5')}}" />
+                <div class="overlay">
+                    <div class="text">
+                        <h3 class="font-lemon-bold">{{ projet.projectName }}</h3>
+                        <p class="technos">{{ projet.description }}</p>
+                        <hr>
+
+                    </div>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
