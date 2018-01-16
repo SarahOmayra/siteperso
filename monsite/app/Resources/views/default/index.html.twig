@@ -59,7 +59,7 @@
                 {% for parcour in parcours %}
                     <ul id="tiles">
                         <li>
-                            <span class="year font-lemon timeline-icon hidden-xs hidden-sm hidden-md">{{ parcour.startDate|localizeddate('long', 'short', 'fr', null, 'MMM YYYY')|capitalize }}</span><span class="description font-lemon ">{{ parcour.title }}</span>
+                            <span class="year font-lemon timeline-icon hidden-xs hidden-sm hidden-md">{{ parcour.startDate|capitalize }}</span><span class="description font-lemon ">{{ parcour.title }}</span>
                             <p class="font-lemon">{{ parcour.company }}</p>
                             <p>{{ parcour.description }}</p>
                             <hr>
